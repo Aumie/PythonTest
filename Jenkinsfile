@@ -13,7 +13,7 @@ pipeline {
             }
         stage('test'){
             steps{
-                    sh 'puthon sampletest.py'
+                    sh 'python sampletest.py'
             }
         }
     }
