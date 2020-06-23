@@ -1,10 +1,16 @@
 pipeline {
     agent { docker { image 'python:3.8.3' } }
     stages {
-        stage('build') {
+        stage('preparing') {
             steps {
                     sh 'python --version'
                     
+                }
+            }
+        stage('building') {
+            steps {
+                    sh 'python --version'
+                    sh 'python sample.py'
                 }
             }
     }
